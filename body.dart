@@ -85,46 +85,55 @@ class PhotographyPlant extends StatelessWidget {
     return Container(
      margin: EdgeInsets.only(left: kDefautPading, 
      top: kDefautPading /2,
+     right: 210+kDefautPading/1,
      bottom: kDefautPading * 2.5,),
      width: size.width * 0.4,
-     child: Column(
-       children: <Widget>[
-         Image.asset("assets/images/image_1.png",
-         ),
-         Container(
-           padding: EdgeInsets.all(kDefautPading / 2),
-           decoration: BoxDecoration(
-             borderRadius: BorderRadius.only(
-               bottomLeft: Radius.circular(10),
-               bottomRight: Radius.circular(10),
-             
+     child: Row(
+       children: [
+         Column(
+           children: <Widget>[
+             Image.asset("assets/images/image_1.png",
              ),
-             color: Colors.white,
-             boxShadow: [
-               BoxShadow(offset: Offset(0, 10),
-               blurRadius: 50,
-               color: kPrimaryColor.withOpacity(0.23),
-               ),
-               ],
-               ),
-               child: Row(
-                 children: <Widget>[
-                   Row(
-                     children: [
-                       RichText(text: TextSpan(
-                         children: [TextSpan(
-                           text: "premium".toUpperCase() ,
-                           style: Theme.of(context).textTheme.button
-                           ),
-                           //
-                         ],
-                         ),
-                         ),
-                     ],
+
+
+             Container(
+               padding: EdgeInsets.all(kDefautPading / 2),
+               decoration: BoxDecoration(
+                 borderRadius: BorderRadius.only(
+                   bottomLeft: Radius.circular(10),
+                   bottomRight: Radius.circular(10),
+                 
+                 ),
+                 
+                 color: Colors.white,
+                 boxShadow: [
+                   BoxShadow(offset: Offset(0, 10),
+                   blurRadius: 50,
+                   color: kPrimaryColor.withOpacity(0.23),
                    ),
-                     ],
-               ),
-         ), 
+                   ],
+                   ),
+                   
+                   child: Row(
+                     children: <Widget>[
+                       Row(
+                         children: [
+                           RichText(text: TextSpan(
+                             children: [TextSpan(
+                               text: "premium".toUpperCase() ,
+                               style: Theme.of(context).textTheme.button
+                               ),
+                               //
+                             ],
+                             ),
+                             ),
+                         ],
+                       ),
+                         ],
+                   ),
+             ), 
+           ],
+         ),
        ],
      ),
           );
@@ -149,7 +158,3 @@ class photo extends StatelessWidget {
     );
   }
 }
-
-
-
-
